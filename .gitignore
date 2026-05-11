@@ -26,10 +26,6 @@ app.log
 .DS_Store
 Thumbs.db
 
-# Project specific
-output/
-*.png
-
 # Ignore markdown files at root level
 *.md
 !README.md
