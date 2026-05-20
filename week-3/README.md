@@ -114,18 +114,20 @@ week-3/
 │   └── run_evaluation.py       # runs all benchmark questions
 ├── tests/
 │   └── test_pipeline.py        # automated regression tests
+├── question/                   # assignment PDFs and benchmark question CSV
+│   ├── sql_questions_only.csv
+│   └── Week3_Task*_Assignment.pdf
 ├── outputs/                    # generated submission artifacts
 ├── logs/                       # JSONL execution logs
 ├── seed.sql                    # database schema and seed data
-├── sql_questions_only.csv      # benchmark natural-language questions
-├── requirements.txt
-└── Week3_Task*_Assignment.pdf  # original assignment PDFs
+└── requirements.txt
 ```
 
 ## Deliverables
 
 | File | Purpose |
 | --- | --- |
+| `question/` | original assignment PDFs and the benchmark question CSV |
 | `outputs/ground_truth_queries.csv` | Task 1 manually verified SQL, questions, and explanations |
 | `outputs/query_results_export.csv` | Task 1 exported result samples and row counts |
 | `outputs/decompositions.csv` | Task 2 intent, tables, columns, filters, and joins |

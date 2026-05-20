@@ -135,7 +135,7 @@ The benchmark evaluates whether a Text-to-SQL agent can transform natural langua
 
 ## Reference Dataset
 
-- Natural language questions: `sql_questions_only.csv`
+- Natural language questions: `question/sql_questions_only.csv`
 - Ground truth SQL: `outputs/ground_truth_queries.csv`
 - Exported query results: `outputs/query_results_export.csv`
 
