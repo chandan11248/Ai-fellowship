@@ -1,8 +1,8 @@
-# Text-to-SQL Evaluation Strategy
+# Text-to-SQL Evaluation Notes
 
 ## Purpose
 
-The benchmark evaluates whether a Text-to-SQL agent can transform natural language questions into safe SQL and return correct database results.
+The goal of the evaluation is to check whether each natural language question is converted into the correct SQL and whether that SQL gives the expected result from the database.
 
 ## Reference Dataset
 
@@ -10,22 +10,19 @@ The benchmark evaluates whether a Text-to-SQL agent can transform natural langua
 - Ground truth SQL: `outputs/ground_truth_queries.csv`
 - Exported query results: `outputs/query_results_export.csv`
 
-## Metrics
+## Metrics Used
 
 | Metric | What It Checks |
 | --- | --- |
-| SQL generation success rate | The agent produced a SQL query for the question. |
-| SELECT-only safety rate | The generated SQL passed read-only validation. |
-| Execution success rate | The SQL executed without database errors. |
-| Ground-truth SQL match | The generated SQL matched the manually verified query for this benchmark. |
-| Result accuracy | The query result matched the expected result export. |
-| Table and column correctness | The SQL used the tables and columns identified in decomposition. |
-| Join correctness | Multi-table queries joined on the expected key columns. |
-| Retry success rate | Failed execution attempts were repaired successfully within the retry limit. |
-| Latency | Query execution time stayed low enough for interactive use. |
-| Natural-language answer quality | The final summary accurately described the returned result. |
+| SQL generated | A SQL query was created for the question. |
+| Safe query | The SQL was a read-only `SELECT` query. |
+| Execution success | The SQL ran without a database error. |
+| Reference match | The generated SQL matched the manually checked SQL. |
+| Result check | The result rows looked correct for the question. |
+| Tables and joins | The query used the right tables and join conditions. |
+| Retry handling | A failed query could be fixed and retried. |
 
-## Evaluation Process
+## Process
 
 1. Decompose each question into intent, tables, columns, filters, and joins.
 2. Generate SQL from the decomposition.
@@ -35,6 +32,6 @@ The benchmark evaluates whether a Text-to-SQL agent can transform natural langua
 6. Export row count and sample rows for result inspection.
 7. Log decomposition, SQL generation, execution time, errors, and retries.
 
-## Ambiguity Handling
+## Ambiguous Questions
 
-If a question is ambiguous, mark it for manual review and document the chosen interpretation. Example: "Average product price" is interpreted as average `buyPrice` because a separate benchmark question asks for average MSRP.
+If a question has more than one possible meaning, I used the schema and the other benchmark questions to choose one meaning. For example, "Average product price" is treated as average `buyPrice` because there is a separate question for average MSRP.

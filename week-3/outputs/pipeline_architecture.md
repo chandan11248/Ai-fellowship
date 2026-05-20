@@ -1,10 +1,10 @@
-# Pipeline Architecture
+# Pipeline Notes
 
-## Design
+## Approach
 
-This submission uses a rule-based Text-to-SQL pipeline for the fixed benchmark dataset. The questions are known in advance, so each benchmark item has a manually verified SQL query, decomposition metadata, and explanation.
+The benchmark questions are fixed, so I used a rule-based mapping for this assignment. Each question has its SQL query, decomposition details, and a short explanation.
 
-## Agent Flow
+## Flow
 
 1. Receive a natural language question.
 2. Normalize the question text.
@@ -14,10 +14,10 @@ This submission uses a rule-based Text-to-SQL pipeline for the fixed benchmark d
 6. If execution fails, repair known column naming mistakes and retry within the configured limit.
 7. Return SQL, rows, row count, summary, status, retry metadata, and execution time.
 
-## Database Choice
+## Database
 
-The SQL is PostgreSQL-compatible and uses quoted identifiers for mixed-case columns from `seed.sql`. The code also includes a SQLite fallback so the benchmark can be executed locally without requiring a running PostgreSQL service.
+The SQL follows the provided schema in `seed.sql`. PostgreSQL can be used through `DATABASE_URL`, but SQLite is also supported for local testing.
 
 ## Safety
 
-The validator blocks non-SELECT statements, stacked statements, and mutation keywords such as INSERT, UPDATE, DELETE, DROP, ALTER, and CREATE.
+The validator only allows a single `SELECT` statement and blocks queries that try to change the database.

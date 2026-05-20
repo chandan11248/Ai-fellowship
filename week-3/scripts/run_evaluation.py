@@ -127,11 +127,11 @@ def write_csv(path: Path, rows: list[dict[str, Any]]) -> None:
 
 def write_evaluation_strategy(path: Path) -> None:
     path.write_text(
-        """# Text-to-SQL Evaluation Strategy
+        """# Text-to-SQL Evaluation Notes
 
 ## Purpose
 
-The benchmark evaluates whether a Text-to-SQL agent can transform natural language questions into safe SQL and return correct database results.
+The goal of the evaluation is to check whether each natural language question is converted into the correct SQL and whether that SQL gives the expected result from the database.
 
 ## Reference Dataset
 
@@ -139,22 +139,19 @@ The benchmark evaluates whether a Text-to-SQL agent can transform natural langua
 - Ground truth SQL: `outputs/ground_truth_queries.csv`
 - Exported query results: `outputs/query_results_export.csv`
 
-## Metrics
+## Metrics Used
 
 | Metric | What It Checks |
 | --- | --- |
-| SQL generation success rate | The agent produced a SQL query for the question. |
-| SELECT-only safety rate | The generated SQL passed read-only validation. |
-| Execution success rate | The SQL executed without database errors. |
-| Ground-truth SQL match | The generated SQL matched the manually verified query for this benchmark. |
-| Result accuracy | The query result matched the expected result export. |
-| Table and column correctness | The SQL used the tables and columns identified in decomposition. |
-| Join correctness | Multi-table queries joined on the expected key columns. |
-| Retry success rate | Failed execution attempts were repaired successfully within the retry limit. |
-| Latency | Query execution time stayed low enough for interactive use. |
-| Natural-language answer quality | The final summary accurately described the returned result. |
+| SQL generated | A SQL query was created for the question. |
+| Safe query | The SQL was a read-only `SELECT` query. |
+| Execution success | The SQL ran without a database error. |
+| Reference match | The generated SQL matched the manually checked SQL. |
+| Result check | The result rows looked correct for the question. |
+| Tables and joins | The query used the right tables and join conditions. |
+| Retry handling | A failed query could be fixed and retried. |
 
-## Evaluation Process
+## Process
 
 1. Decompose each question into intent, tables, columns, filters, and joins.
 2. Generate SQL from the decomposition.
@@ -164,9 +161,9 @@ The benchmark evaluates whether a Text-to-SQL agent can transform natural langua
 6. Export row count and sample rows for result inspection.
 7. Log decomposition, SQL generation, execution time, errors, and retries.
 
-## Ambiguity Handling
+## Ambiguous Questions
 
-If a question is ambiguous, mark it for manual review and document the chosen interpretation. Example: "Average product price" is interpreted as average `buyPrice` because a separate benchmark question asks for average MSRP.
+If a question has more than one possible meaning, I used the schema and the other benchmark questions to choose one meaning. For example, "Average product price" is treated as average `buyPrice` because there is a separate question for average MSRP.
 """,
         encoding="utf-8",
     )
@@ -174,13 +171,13 @@ If a question is ambiguous, mark it for manual review and document the chosen in
 
 def write_pipeline_architecture(path: Path) -> None:
     path.write_text(
-        """# Pipeline Architecture
+        """# Pipeline Notes
 
-## Design
+## Approach
 
-This submission uses a rule-based Text-to-SQL pipeline for the fixed benchmark dataset. The questions are known in advance, so each benchmark item has a manually verified SQL query, decomposition metadata, and explanation.
+The benchmark questions are fixed, so I used a rule-based mapping for this assignment. Each question has its SQL query, decomposition details, and a short explanation.
 
-## Agent Flow
+## Flow
 
 1. Receive a natural language question.
 2. Normalize the question text.
@@ -190,13 +187,13 @@ This submission uses a rule-based Text-to-SQL pipeline for the fixed benchmark d
 6. If execution fails, repair known column naming mistakes and retry within the configured limit.
 7. Return SQL, rows, row count, summary, status, retry metadata, and execution time.
 
-## Database Choice
+## Database
 
-The SQL is PostgreSQL-compatible and uses quoted identifiers for mixed-case columns from `seed.sql`. The code also includes a SQLite fallback so the benchmark can be executed locally without requiring a running PostgreSQL service.
+The SQL follows the provided schema in `seed.sql`. PostgreSQL can be used through `DATABASE_URL`, but SQLite is also supported for local testing.
 
 ## Safety
 
-The validator blocks non-SELECT statements, stacked statements, and mutation keywords such as INSERT, UPDATE, DELETE, DROP, ALTER, and CREATE.
+The validator only allows a single `SELECT` statement and blocks queries that try to change the database.
 """,
         encoding="utf-8",
     )
@@ -213,7 +210,7 @@ def write_report(
     success_rate = success_count / total * 100
     correct_sql_rate = correct_sql_count / total * 100
     path.write_text(
-        f"""# Week 3 Text-to-SQL Evaluation Report
+        f"""# Week 3 Evaluation Report
 
 ## Summary
 
@@ -221,32 +218,29 @@ def write_report(
 | --- | ---: |
 | Benchmark questions | {total} |
 | SQL execution success | {success_count}/{total} ({success_rate:.1f}%) |
-| Ground-truth SQL match | {correct_sql_count}/{total} ({correct_sql_rate:.1f}%) |
-| Benchmark retries needed | {retry_count} |
+| SQL matched reference queries | {correct_sql_count}/{total} ({correct_sql_rate:.1f}%) |
+| Retries needed during benchmark | {retry_count} |
 | Failed benchmark queries | {total - success_count} |
 
-## Deliverables
+## Files Checked
 
-- Ground truth SQL and explanations: `outputs/ground_truth_queries.csv`
-- Query decompositions: `outputs/decompositions.csv`
-- Generated SQL and evaluation table: `outputs/generated_sql_outputs.csv`
-- Exported results with row counts and sample rows: `outputs/query_results_export.csv`
-- Execution logs: `logs/execution_logs.jsonl`
-- Retry example: `outputs/retry_example.json`
-- Evaluation framework: `outputs/evaluation_strategy.md`
-- Architecture explanation: `outputs/pipeline_architecture.md`
+- `outputs/ground_truth_queries.csv`
+- `outputs/decompositions.csv`
+- `outputs/generated_sql_outputs.csv`
+- `outputs/query_results_export.csv`
+- `logs/execution_logs.jsonl`
 
-## Successful Cases
+## Example Queries
 
-- Simple retrieval: "List all products" generated `SELECT * FROM products;` and executed successfully.
-- Join query: "Get payments with customer names" joined `payments` to `customers` on `customerNumber`.
-- Aggregation query: "Count customers per country" grouped customers by country and returned customer counts.
+- "List all products" uses a direct `SELECT` from the products table.
+- "Get payments with customer names" joins payments with customers using `customerNumber`.
+- "Count customers per country" groups customers by country.
 
-## Retry Handling Example
+## Retry Example
 
-The retry demo intentionally starts with `SELECT product_name FROM products LIMIT 3;`, which fails because the schema uses `"productName"`. The agent reads the error, repairs the column name, retries once, and finishes with status `{retry_demo["status"]}` after {retry_demo["attempts"]} attempts.
+I also kept one retry example to show error handling. The first query uses `product_name`, which is not a column in the schema. The retry changes it to `"productName"` and then the query works.
 
-Final repaired SQL:
+Repaired SQL:
 
 ```sql
 {retry_demo["sql"]}
@@ -254,7 +248,7 @@ Final repaired SQL:
 
 ## Notes
 
-The benchmark generator is deterministic, so generated SQL exactly matches the manually verified SQL for all provided questions. For a production LLM-based system, the same evaluation framework can compare generated SQL and result sets from non-deterministic model outputs against these reference files.
+The benchmark question list is fixed, so the SQL generation is rule-based for this assignment. This makes the output easy to compare with the manually written SQL.
 """,
         encoding="utf-8",
     )
