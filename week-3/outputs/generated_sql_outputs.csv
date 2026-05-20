@@ -1,0 +1,150 @@
+question,generated_sql,matches_ground_truth_sql,executed_successfully,correct_result,retry_needed,attempts,execution_time_ms,final_status,errors
+List all products,SELECT * FROM products;,True,True,True,False,1,0.167,success,
+Get all customers,SELECT * FROM customers;,True,True,True,False,1,0.242,success,
+Show all orders,SELECT * FROM orders;,True,True,True,False,1,0.404,success,
+List all employees,SELECT * FROM employees;,True,True,True,False,1,0.033,success,
+Get all offices,SELECT * FROM offices;,True,True,True,False,1,0.019,success,
+Show all product lines,SELECT * FROM productlines;,True,True,True,False,1,0.012,success,
+List all payments,SELECT * FROM payments;,True,True,True,False,1,0.139,success,
+Get product names and prices,"SELECT ""productName"", ""buyPrice"", ""MSRP""
+FROM products
+ORDER BY ""productName"";",True,True,True,False,1,0.075,success,
+Get customer names and cities,"SELECT ""customerName"", ""city""
+FROM customers
+ORDER BY ""customerName"";",True,True,True,False,1,0.073,success,
+List employee first and last names,"SELECT ""firstName"", ""lastName""
+FROM employees
+ORDER BY ""lastName"", ""firstName"";",True,True,True,False,1,0.019,success,
+Get all order dates,"SELECT ""orderNumber"", ""orderDate""
+FROM orders
+ORDER BY ""orderDate"", ""orderNumber"";",True,True,True,False,1,0.128,success,
+Show product vendor list,"SELECT DISTINCT ""productVendor""
+FROM products
+ORDER BY ""productVendor"";",True,True,True,False,1,0.031,success,
+Get all product codes,"SELECT ""productCode""
+FROM products
+ORDER BY ""productCode"";",True,True,True,False,1,0.034,success,
+List all countries from offices,"SELECT DISTINCT ""country""
+FROM offices
+ORDER BY ""country"";",True,True,True,False,1,0.011,success,
+Show all order statuses,"SELECT DISTINCT ""status""
+FROM orders
+ORDER BY ""status"";",True,True,True,False,1,0.037,success,
+Get all payment amounts,"SELECT ""customerNumber"", ""checkNumber"", ""amount""
+FROM payments
+ORDER BY ""amount"" DESC;",True,True,True,False,1,0.156,success,
+List all job titles,"SELECT DISTINCT ""jobTitle""
+FROM employees
+ORDER BY ""jobTitle"";",True,True,True,False,1,0.012,success,
+Get customer phone numbers,"SELECT ""customerName"", ""phone""
+FROM customers
+ORDER BY ""customerName"";",True,True,True,False,1,0.066,success,
+Show product MSRP values,"SELECT ""productName"", ""MSRP""
+FROM products
+ORDER BY ""productName"";",True,True,True,False,1,0.057,success,
+List order numbers,"SELECT ""orderNumber""
+FROM orders
+ORDER BY ""orderNumber"";",True,True,True,False,1,0.08,success,
+Get orders with customer names,"SELECT o.""orderNumber"", o.""orderDate"", o.""status"", c.""customerName""
+FROM orders o
+JOIN customers c ON c.""customerNumber"" = o.""customerNumber""
+ORDER BY o.""orderNumber"";",True,True,True,False,1,0.219,success,
+Get employees with office city,"SELECT e.""employeeNumber"", e.""firstName"", e.""lastName"", o.""city"" AS office_city
+FROM employees e
+JOIN offices o ON o.""officeCode"" = e.""officeCode""
+ORDER BY e.""employeeNumber"";",True,True,True,False,1,0.028,success,
+Get payments with customer names,"SELECT p.""checkNumber"", p.""paymentDate"", p.""amount"", c.""customerName""
+FROM payments p
+JOIN customers c ON c.""customerNumber"" = p.""customerNumber""
+ORDER BY p.""paymentDate"", p.""checkNumber"";",True,True,True,False,1,0.2,success,
+Get order details with product names,"SELECT od.""orderNumber"", p.""productName"", od.""quantityOrdered"", od.""priceEach""
+FROM orderdetails od
+JOIN products p ON p.""productCode"" = od.""productCode""
+ORDER BY od.""orderNumber"", p.""productName"";",True,True,True,False,1,3.87,success,
+Get products with product line description,"SELECT p.""productCode"", p.""productName"", pl.""productLine"", pl.""textDescription""
+FROM products p
+JOIN productlines pl ON pl.""productLine"" = p.""productLine""
+ORDER BY p.""productCode"";",True,True,True,False,1,0.138,success,
+Get customers with sales rep names,"SELECT c.""customerName"", e.""firstName"" AS sales_rep_first_name, e.""lastName"" AS sales_rep_last_name
+FROM customers c
+LEFT JOIN employees e ON e.""employeeNumber"" = c.""salesRepEmployeeNumber""
+ORDER BY c.""customerName"";",True,True,True,False,1,0.105,success,
+Get orders with customer city,"SELECT o.""orderNumber"", o.""orderDate"", o.""status"", c.""city""
+FROM orders o
+JOIN customers c ON c.""customerNumber"" = o.""customerNumber""
+ORDER BY o.""orderNumber"";",True,True,True,False,1,0.202,success,
+Get employees and their manager,"SELECT e.""employeeNumber"", e.""firstName"", e.""lastName"", m.""firstName"" AS manager_first_name, m.""lastName"" AS manager_last_name
+FROM employees e
+LEFT JOIN employees m ON m.""employeeNumber"" = e.""reportsTo""
+ORDER BY e.""employeeNumber"";",True,True,True,False,1,0.029,success,
+Get orderdetails with product vendor,"SELECT od.""orderNumber"", od.""productCode"", p.""productVendor"", od.""quantityOrdered"", od.""priceEach""
+FROM orderdetails od
+JOIN products p ON p.""productCode"" = od.""productCode""
+ORDER BY od.""orderNumber"", od.""productCode"";",True,True,True,False,1,2.364,success,
+Get payments with customer country,"SELECT p.""checkNumber"", p.""paymentDate"", p.""amount"", c.""country""
+FROM payments p
+JOIN customers c ON c.""customerNumber"" = p.""customerNumber""
+ORDER BY p.""paymentDate"", p.""checkNumber"";",True,True,True,False,1,0.252,success,
+Count customers per country,"SELECT ""country"", COUNT(*) AS customer_count
+FROM customers
+GROUP BY ""country""
+ORDER BY customer_count DESC, ""country"";",True,True,True,False,1,0.057,success,
+Total payments per customer,"SELECT c.""customerNumber"", c.""customerName"", COALESCE(SUM(p.""amount""), 0) AS total_payments
+FROM customers c
+LEFT JOIN payments p ON p.""customerNumber"" = c.""customerNumber""
+GROUP BY c.""customerNumber"", c.""customerName""
+ORDER BY total_payments DESC, c.""customerName"";",True,True,True,False,1,0.172,success,
+Number of orders per status,"SELECT ""status"", COUNT(*) AS order_count
+FROM orders
+GROUP BY ""status""
+ORDER BY order_count DESC, ""status"";",True,True,True,False,1,0.051,success,
+Products per product line,"SELECT ""productLine"", COUNT(*) AS product_count
+FROM products
+GROUP BY ""productLine""
+ORDER BY product_count DESC, ""productLine"";",True,True,True,False,1,0.034,success,
+Employees per office,"SELECT o.""officeCode"", o.""city"", COUNT(e.""employeeNumber"") AS employee_count
+FROM offices o
+LEFT JOIN employees e ON e.""officeCode"" = o.""officeCode""
+GROUP BY o.""officeCode"", o.""city""
+ORDER BY employee_count DESC, o.""officeCode"";",True,True,True,False,1,0.054,success,
+Total stock per product vendor,"SELECT ""productVendor"", SUM(""quantityInStock"") AS total_stock
+FROM products
+GROUP BY ""productVendor""
+ORDER BY total_stock DESC, ""productVendor"";",True,True,True,False,1,0.042,success,
+Average buy price per product line,"SELECT ""productLine"", ROUND(AVG(""buyPrice""), 2) AS average_buy_price
+FROM products
+GROUP BY ""productLine""
+ORDER BY average_buy_price DESC, ""productLine"";",True,True,True,False,1,0.041,success,
+Orders per customer,"SELECT c.""customerNumber"", c.""customerName"", COUNT(o.""orderNumber"") AS order_count
+FROM customers c
+LEFT JOIN orders o ON o.""customerNumber"" = c.""customerNumber""
+GROUP BY c.""customerNumber"", c.""customerName""
+ORDER BY order_count DESC, c.""customerName"";",True,True,True,False,1,0.2,success,
+Max MSRP per product line,"SELECT ""productLine"", MAX(""MSRP"") AS max_msrp
+FROM products
+GROUP BY ""productLine""
+ORDER BY max_msrp DESC, ""productLine"";",True,True,True,False,1,0.032,success,
+Min buy price per vendor,"SELECT ""productVendor"", MIN(""buyPrice"") AS min_buy_price
+FROM products
+GROUP BY ""productVendor""
+ORDER BY min_buy_price, ""productVendor"";",True,True,True,False,1,0.039,success,
+Total number of customers,"SELECT COUNT(*) AS total_customers
+FROM customers;",True,True,True,False,1,0.006,success,
+Total number of products,"SELECT COUNT(*) AS total_products
+FROM products;",True,True,True,False,1,0.005,success,
+Total revenue from payments,"SELECT SUM(""amount"") AS total_revenue
+FROM payments;",True,True,True,False,1,0.013,success,
+Average product price,"SELECT ROUND(AVG(""buyPrice""), 2) AS average_product_price
+FROM products;",True,True,True,False,1,0.013,success,
+Max payment amount,"SELECT MAX(""amount"") AS max_payment_amount
+FROM payments;",True,True,True,False,1,0.012,success,
+Min payment amount,"SELECT MIN(""amount"") AS min_payment_amount
+FROM payments;",True,True,True,False,1,0.015,success,
+Count total orders,"SELECT COUNT(*) AS total_orders
+FROM orders;",True,True,True,False,1,0.009,success,
+Total quantity in stock,"SELECT SUM(""quantityInStock"") AS total_quantity_in_stock
+FROM products;",True,True,True,False,1,0.01,success,
+Average MSRP,"SELECT ROUND(AVG(""MSRP""), 2) AS average_msrp
+FROM products;",True,True,True,False,1,0.012,success,
+Number of employees,"SELECT COUNT(*) AS total_employees
+FROM employees;",True,True,True,False,1,0.005,success,

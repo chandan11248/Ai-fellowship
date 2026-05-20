@@ -1,0 +1,150 @@
+question,sql,explanation
+List all products,SELECT * FROM products;,Selects every column from the products table.
+Get all customers,SELECT * FROM customers;,Selects every column from the customers table.
+Show all orders,SELECT * FROM orders;,Selects every column from the orders table.
+List all employees,SELECT * FROM employees;,Selects every column from the employees table.
+Get all offices,SELECT * FROM offices;,Selects every column from the offices table.
+Show all product lines,SELECT * FROM productlines;,Selects every column from the productlines table.
+List all payments,SELECT * FROM payments;,Selects every column from the payments table.
+Get product names and prices,"SELECT ""productName"", ""buyPrice"", ""MSRP""
+FROM products
+ORDER BY ""productName"";",Reads product name and price columns from products and sorts by product name.
+Get customer names and cities,"SELECT ""customerName"", ""city""
+FROM customers
+ORDER BY ""customerName"";",Reads customer names and city values from customers.
+List employee first and last names,"SELECT ""firstName"", ""lastName""
+FROM employees
+ORDER BY ""lastName"", ""firstName"";",Reads employee first and last names and sorts alphabetically.
+Get all order dates,"SELECT ""orderNumber"", ""orderDate""
+FROM orders
+ORDER BY ""orderDate"", ""orderNumber"";",Reads each order date with its order number.
+Show product vendor list,"SELECT DISTINCT ""productVendor""
+FROM products
+ORDER BY ""productVendor"";",Uses DISTINCT to list each product vendor once.
+Get all product codes,"SELECT ""productCode""
+FROM products
+ORDER BY ""productCode"";",Reads all product codes from products.
+List all countries from offices,"SELECT DISTINCT ""country""
+FROM offices
+ORDER BY ""country"";",Uses DISTINCT to list the countries that contain offices.
+Show all order statuses,"SELECT DISTINCT ""status""
+FROM orders
+ORDER BY ""status"";",Uses DISTINCT to show each order status once.
+Get all payment amounts,"SELECT ""customerNumber"", ""checkNumber"", ""amount""
+FROM payments
+ORDER BY ""amount"" DESC;",Reads payment amounts with their identifying customer and check numbers.
+List all job titles,"SELECT DISTINCT ""jobTitle""
+FROM employees
+ORDER BY ""jobTitle"";",Uses DISTINCT to list every job title once.
+Get customer phone numbers,"SELECT ""customerName"", ""phone""
+FROM customers
+ORDER BY ""customerName"";",Reads customer names and phone numbers from customers.
+Show product MSRP values,"SELECT ""productName"", ""MSRP""
+FROM products
+ORDER BY ""productName"";",Reads each product name with its MSRP.
+List order numbers,"SELECT ""orderNumber""
+FROM orders
+ORDER BY ""orderNumber"";",Reads all order numbers from orders.
+Get orders with customer names,"SELECT o.""orderNumber"", o.""orderDate"", o.""status"", c.""customerName""
+FROM orders o
+JOIN customers c ON c.""customerNumber"" = o.""customerNumber""
+ORDER BY o.""orderNumber"";",Joins orders to customers on customerNumber so each order includes the customer name.
+Get employees with office city,"SELECT e.""employeeNumber"", e.""firstName"", e.""lastName"", o.""city"" AS office_city
+FROM employees e
+JOIN offices o ON o.""officeCode"" = e.""officeCode""
+ORDER BY e.""employeeNumber"";",Joins employees to offices by officeCode to attach each employee's office city.
+Get payments with customer names,"SELECT p.""checkNumber"", p.""paymentDate"", p.""amount"", c.""customerName""
+FROM payments p
+JOIN customers c ON c.""customerNumber"" = p.""customerNumber""
+ORDER BY p.""paymentDate"", p.""checkNumber"";",Joins payments to customers by customerNumber so payment rows include customer names.
+Get order details with product names,"SELECT od.""orderNumber"", p.""productName"", od.""quantityOrdered"", od.""priceEach""
+FROM orderdetails od
+JOIN products p ON p.""productCode"" = od.""productCode""
+ORDER BY od.""orderNumber"", p.""productName"";",Joins orderdetails to products by productCode so each line item includes the product name.
+Get products with product line description,"SELECT p.""productCode"", p.""productName"", pl.""productLine"", pl.""textDescription""
+FROM products p
+JOIN productlines pl ON pl.""productLine"" = p.""productLine""
+ORDER BY p.""productCode"";",Joins products to productlines to include the description for each product line.
+Get customers with sales rep names,"SELECT c.""customerName"", e.""firstName"" AS sales_rep_first_name, e.""lastName"" AS sales_rep_last_name
+FROM customers c
+LEFT JOIN employees e ON e.""employeeNumber"" = c.""salesRepEmployeeNumber""
+ORDER BY c.""customerName"";",Uses a left join so customers without a sales representative are still included.
+Get orders with customer city,"SELECT o.""orderNumber"", o.""orderDate"", o.""status"", c.""city""
+FROM orders o
+JOIN customers c ON c.""customerNumber"" = o.""customerNumber""
+ORDER BY o.""orderNumber"";",Joins orders to customers by customerNumber to include the customer city.
+Get employees and their manager,"SELECT e.""employeeNumber"", e.""firstName"", e.""lastName"", m.""firstName"" AS manager_first_name, m.""lastName"" AS manager_last_name
+FROM employees e
+LEFT JOIN employees m ON m.""employeeNumber"" = e.""reportsTo""
+ORDER BY e.""employeeNumber"";",Uses a self join on employees.reportsTo to include manager names.
+Get orderdetails with product vendor,"SELECT od.""orderNumber"", od.""productCode"", p.""productVendor"", od.""quantityOrdered"", od.""priceEach""
+FROM orderdetails od
+JOIN products p ON p.""productCode"" = od.""productCode""
+ORDER BY od.""orderNumber"", od.""productCode"";",Joins orderdetails to products so each order line includes the product vendor.
+Get payments with customer country,"SELECT p.""checkNumber"", p.""paymentDate"", p.""amount"", c.""country""
+FROM payments p
+JOIN customers c ON c.""customerNumber"" = p.""customerNumber""
+ORDER BY p.""paymentDate"", p.""checkNumber"";",Joins payments to customers by customerNumber to include customer country.
+Count customers per country,"SELECT ""country"", COUNT(*) AS customer_count
+FROM customers
+GROUP BY ""country""
+ORDER BY customer_count DESC, ""country"";",Groups customers by country and counts rows in each group.
+Total payments per customer,"SELECT c.""customerNumber"", c.""customerName"", COALESCE(SUM(p.""amount""), 0) AS total_payments
+FROM customers c
+LEFT JOIN payments p ON p.""customerNumber"" = c.""customerNumber""
+GROUP BY c.""customerNumber"", c.""customerName""
+ORDER BY total_payments DESC, c.""customerName"";","Left joins customers to payments, groups by customer, and sums payment amounts."
+Number of orders per status,"SELECT ""status"", COUNT(*) AS order_count
+FROM orders
+GROUP BY ""status""
+ORDER BY order_count DESC, ""status"";",Groups orders by status and counts rows in each group.
+Products per product line,"SELECT ""productLine"", COUNT(*) AS product_count
+FROM products
+GROUP BY ""productLine""
+ORDER BY product_count DESC, ""productLine"";",Groups products by productLine and counts products in each group.
+Employees per office,"SELECT o.""officeCode"", o.""city"", COUNT(e.""employeeNumber"") AS employee_count
+FROM offices o
+LEFT JOIN employees e ON e.""officeCode"" = o.""officeCode""
+GROUP BY o.""officeCode"", o.""city""
+ORDER BY employee_count DESC, o.""officeCode"";","Left joins offices to employees, groups by office, and counts employees."
+Total stock per product vendor,"SELECT ""productVendor"", SUM(""quantityInStock"") AS total_stock
+FROM products
+GROUP BY ""productVendor""
+ORDER BY total_stock DESC, ""productVendor"";",Groups products by vendor and sums quantityInStock.
+Average buy price per product line,"SELECT ""productLine"", ROUND(AVG(""buyPrice""), 2) AS average_buy_price
+FROM products
+GROUP BY ""productLine""
+ORDER BY average_buy_price DESC, ""productLine"";",Groups products by productLine and calculates the average buyPrice.
+Orders per customer,"SELECT c.""customerNumber"", c.""customerName"", COUNT(o.""orderNumber"") AS order_count
+FROM customers c
+LEFT JOIN orders o ON o.""customerNumber"" = c.""customerNumber""
+GROUP BY c.""customerNumber"", c.""customerName""
+ORDER BY order_count DESC, c.""customerName"";","Left joins customers to orders, groups by customer, and counts orders."
+Max MSRP per product line,"SELECT ""productLine"", MAX(""MSRP"") AS max_msrp
+FROM products
+GROUP BY ""productLine""
+ORDER BY max_msrp DESC, ""productLine"";",Groups products by productLine and returns the maximum MSRP in each group.
+Min buy price per vendor,"SELECT ""productVendor"", MIN(""buyPrice"") AS min_buy_price
+FROM products
+GROUP BY ""productVendor""
+ORDER BY min_buy_price, ""productVendor"";",Groups products by vendor and returns the minimum buyPrice in each group.
+Total number of customers,"SELECT COUNT(*) AS total_customers
+FROM customers;",Counts every row in customers.
+Total number of products,"SELECT COUNT(*) AS total_products
+FROM products;",Counts every row in products.
+Total revenue from payments,"SELECT SUM(""amount"") AS total_revenue
+FROM payments;",Sums the amount column across all payments.
+Average product price,"SELECT ROUND(AVG(""buyPrice""), 2) AS average_product_price
+FROM products;",Calculates the average buyPrice for all products.
+Max payment amount,"SELECT MAX(""amount"") AS max_payment_amount
+FROM payments;",Returns the largest payment amount.
+Min payment amount,"SELECT MIN(""amount"") AS min_payment_amount
+FROM payments;",Returns the smallest payment amount.
+Count total orders,"SELECT COUNT(*) AS total_orders
+FROM orders;",Counts every row in orders.
+Total quantity in stock,"SELECT SUM(""quantityInStock"") AS total_quantity_in_stock
+FROM products;",Sums the quantityInStock column across all products.
+Average MSRP,"SELECT ROUND(AVG(""MSRP""), 2) AS average_msrp
+FROM products;",Calculates the average MSRP across all products.
+Number of employees,"SELECT COUNT(*) AS total_employees
+FROM employees;",Counts every row in employees.

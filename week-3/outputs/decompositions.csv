@@ -1,0 +1,51 @@
+question,intent,tables,columns,filters,joins
+List all products,Retrieve every product record,products,*,None,None
+Get all customers,Retrieve every customer record,customers,*,None,None
+Show all orders,Retrieve every order record,orders,*,None,None
+List all employees,Retrieve every employee record,employees,*,None,None
+Get all offices,Retrieve every office record,offices,*,None,None
+Show all product lines,Retrieve every product line record,productlines,*,None,None
+List all payments,Retrieve every payment record,payments,*,None,None
+Get product names and prices,Retrieve product names with purchase and MSRP prices,products,"""productName"", ""buyPrice"", ""MSRP""",None,None
+Get customer names and cities,Retrieve customer names and their cities,customers,"""customerName"", ""city""",None,None
+List employee first and last names,Retrieve employee names,employees,"""firstName"", ""lastName""",None,None
+Get all order dates,Retrieve order numbers and dates,orders,"""orderNumber"", ""orderDate""",None,None
+Show product vendor list,Retrieve unique product vendors,products,"""productVendor""",None,None
+Get all product codes,Retrieve product codes,products,"""productCode""",None,None
+List all countries from offices,Retrieve office countries,offices,"""country""",None,None
+Show all order statuses,Retrieve unique order statuses,orders,"""status""",None,None
+Get all payment amounts,Retrieve payment amounts,payments,"""customerNumber"", ""checkNumber"", ""amount""",None,None
+List all job titles,Retrieve unique employee job titles,employees,"""jobTitle""",None,None
+Get customer phone numbers,Retrieve customer phone numbers,customers,"""customerName"", ""phone""",None,None
+Show product MSRP values,Retrieve MSRP values for products,products,"""productName"", ""MSRP""",None,None
+List order numbers,Retrieve order numbers,orders,"""orderNumber""",None,None
+Get orders with customer names,Retrieve orders and the customer for each order,"orders, customers","o.""orderNumber"", o.""orderDate"", o.""status"", c.""customerName""",None,customers.customerNumber = orders.customerNumber
+Get employees with office city,Retrieve employees and their office city,"employees, offices","e.""employeeNumber"", e.""firstName"", e.""lastName"", o.""city""",None,offices.officeCode = employees.officeCode
+Get payments with customer names,Retrieve payments and customer names,"payments, customers","p.""checkNumber"", p.""paymentDate"", p.""amount"", c.""customerName""",None,customers.customerNumber = payments.customerNumber
+Get order details with product names,Retrieve order detail rows and product names,"orderdetails, products","od.""orderNumber"", p.""productName"", od.""quantityOrdered"", od.""priceEach""",None,products.productCode = orderdetails.productCode
+Get products with product line description,Retrieve products and product line descriptions,"products, productlines","p.""productCode"", p.""productName"", pl.""productLine"", pl.""textDescription""",None,productlines.productLine = products.productLine
+Get customers with sales rep names,Retrieve customers and assigned sales representatives,"customers, employees","c.""customerName"", e.""firstName"", e.""lastName""",None,employees.employeeNumber = customers.salesRepEmployeeNumber
+Get orders with customer city,Retrieve orders and customer cities,"orders, customers","o.""orderNumber"", o.""orderDate"", o.""status"", c.""city""",None,customers.customerNumber = orders.customerNumber
+Get employees and their manager,Retrieve employees and manager names,employees,"e.""employeeNumber"", e.""firstName"", e.""lastName"", m.""firstName"", m.""lastName""",None,manager.employeeNumber = employee.reportsTo
+Get orderdetails with product vendor,Retrieve order detail rows and product vendors,"orderdetails, products","od.""orderNumber"", od.""productCode"", p.""productVendor"", od.""quantityOrdered"", od.""priceEach""",None,products.productCode = orderdetails.productCode
+Get payments with customer country,Retrieve payments and customer countries,"payments, customers","p.""checkNumber"", p.""paymentDate"", p.""amount"", c.""country""",None,customers.customerNumber = payments.customerNumber
+Count customers per country,Count customers grouped by country,customers,"""country"", COUNT(*)",None,None
+Total payments per customer,Sum payment amounts by customer,"customers, payments","c.""customerNumber"", c.""customerName"", SUM(p.""amount"")",None,payments.customerNumber = customers.customerNumber
+Number of orders per status,Count orders grouped by status,orders,"""status"", COUNT(*)",None,None
+Products per product line,Count products grouped by product line,products,"""productLine"", COUNT(*)",None,None
+Employees per office,Count employees grouped by office,"offices, employees","o.""officeCode"", o.""city"", COUNT(e.""employeeNumber"")",None,employees.officeCode = offices.officeCode
+Total stock per product vendor,Sum quantity in stock by product vendor,products,"""productVendor"", SUM(""quantityInStock"")",None,None
+Average buy price per product line,Average buy price grouped by product line,products,"""productLine"", AVG(""buyPrice"")",None,None
+Orders per customer,Count orders grouped by customer,"customers, orders","c.""customerNumber"", c.""customerName"", COUNT(o.""orderNumber"")",None,orders.customerNumber = customers.customerNumber
+Max MSRP per product line,Find maximum MSRP grouped by product line,products,"""productLine"", MAX(""MSRP"")",None,None
+Min buy price per vendor,Find minimum buy price grouped by vendor,products,"""productVendor"", MIN(""buyPrice"")",None,None
+Total number of customers,Count all customers,customers,COUNT(*),None,None
+Total number of products,Count all products,products,COUNT(*),None,None
+Total revenue from payments,Sum all payment amounts,payments,"SUM(""amount"")",None,None
+Average product price,Calculate average product buy price,products,"AVG(""buyPrice"")",None,None
+Max payment amount,Find maximum payment amount,payments,"MAX(""amount"")",None,None
+Min payment amount,Find minimum payment amount,payments,"MIN(""amount"")",None,None
+Count total orders,Count all orders,orders,COUNT(*),None,None
+Total quantity in stock,Sum product stock quantity,products,"SUM(""quantityInStock"")",None,None
+Average MSRP,Calculate average MSRP,products,"AVG(""MSRP"")",None,None
+Number of employees,Count all employees,employees,COUNT(*),None,None

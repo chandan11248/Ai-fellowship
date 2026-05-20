@@ -1,0 +1,38 @@
+{
+  "question": "Retry demo: product names",
+  "decomposition": {
+    "intent": "Demonstrate retry repair for a common column naming mistake",
+    "tables": [
+      "products"
+    ],
+    "columns": [
+      "\"productName\""
+    ],
+    "filters": "None",
+    "joins": "None"
+  },
+  "sql": "SELECT \"productName\" FROM products LIMIT 3;",
+  "result": [
+    {
+      "productName": "1969 Harley Davidson Ultimate Chopper"
+    },
+    {
+      "productName": "1952 Alpine Renault 1300"
+    },
+    {
+      "productName": "1996 Moto Guzzi 1100i"
+    }
+  ],
+  "row_count": 3,
+  "columns": [
+    "productName"
+  ],
+  "summary": "The query returned 3 rows.",
+  "status": "success",
+  "attempts": 2,
+  "retry_needed": true,
+  "errors": [
+    "no such column: product_name"
+  ],
+  "execution_time_ms": 0.007
+}
