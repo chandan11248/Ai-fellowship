@@ -1,0 +1,149 @@
+{
+  "total_cases": 6,
+  "completed_cases": 6,
+  "completion_rate_pct": 100.0,
+  "mean_tool_correctness_pct": 100.0,
+  "avg_trajectory_length": 1.0,
+  "avg_multi_agent_tokens": 1681.8,
+  "avg_single_agent_tokens": 1529.2,
+  "avg_coordination_overhead_pct": 9.1,
+  "failure_counts": {
+    "none": 6,
+    "hard_failure": 0,
+    "soft_failure": 0,
+    "cascading_soft_failure": 0
+  },
+  "failure_injection_success": true,
+  "results": [
+    {
+      "test_id": "TC-01",
+      "name": "Damaged Item Warranty & Full Refund Claim",
+      "query": "I received order ORD-1001 four days ago, but the headphones arrived damaged and broken. Can I get a full refund?",
+      "task_completed": true,
+      "tool_call_correctness": 1.0,
+      "multi_agent_iterations": 1,
+      "single_agent_iterations": 3,
+      "multi_agent_tokens": 1887,
+      "single_agent_tokens": 1362,
+      "coordination_token_overhead_pct": 38.5,
+      "multi_agent_latency_ms": 0.4,
+      "single_agent_latency_ms": 0.09,
+      "failure_type": "none",
+      "failure_details": null,
+      "tools_called": [
+        "order_lookup",
+        "calculate_refund"
+      ],
+      "audit_passed": true,
+      "injected_failure_handled": null
+    },
+    {
+      "test_id": "TC-02",
+      "name": "Cross-SKU Exchange with Inventory Verification",
+      "query": "I want to exchange my order ORD-1002 for SKU-KEYBOARD-PRO. Is it available in your warehouse and how does the exchange work?",
+      "task_completed": true,
+      "tool_call_correctness": 1.0,
+      "multi_agent_iterations": 1,
+      "single_agent_iterations": 4,
+      "multi_agent_tokens": 2461,
+      "single_agent_tokens": 3068,
+      "coordination_token_overhead_pct": -19.8,
+      "multi_agent_latency_ms": 0.25,
+      "single_agent_latency_ms": 0.15,
+      "failure_type": "none",
+      "failure_details": null,
+      "tools_called": [
+        "load_skill",
+        "order_lookup",
+        "check_item_inventory"
+      ],
+      "audit_passed": true,
+      "injected_failure_handled": null
+    },
+    {
+      "test_id": "TC-03",
+      "name": "Real-Time Carrier Status Verification",
+      "query": "Where is my shipment for order ORD-1002 with tracking TRK-123456789? Has it arrived at my home?",
+      "task_completed": true,
+      "tool_call_correctness": 1.0,
+      "multi_agent_iterations": 1,
+      "single_agent_iterations": 3,
+      "multi_agent_tokens": 1863,
+      "single_agent_tokens": 1353,
+      "coordination_token_overhead_pct": 37.7,
+      "multi_agent_latency_ms": 0.13,
+      "single_agent_latency_ms": 0.06,
+      "failure_type": "none",
+      "failure_details": null,
+      "tools_called": [
+        "order_lookup",
+        "track_shipping_package"
+      ],
+      "audit_passed": true,
+      "injected_failure_handled": null
+    },
+    {
+      "test_id": "TC-04",
+      "name": "Ambiguous Return Request (Missing Order ID)",
+      "query": "I need to return my item for a refund immediately, please process the return label.",
+      "task_completed": true,
+      "tool_call_correctness": 1.0,
+      "multi_agent_iterations": 1,
+      "single_agent_iterations": 2,
+      "multi_agent_tokens": 125,
+      "single_agent_tokens": 718,
+      "coordination_token_overhead_pct": -82.6,
+      "multi_agent_latency_ms": 0.0,
+      "single_agent_latency_ms": 0.04,
+      "failure_type": "none",
+      "failure_details": null,
+      "tools_called": [],
+      "audit_passed": true,
+      "injected_failure_handled": null
+    },
+    {
+      "test_id": "TC-05",
+      "name": "Dispute Resolution on Return Window & Restocking Fee",
+      "query": "I have an opened box item from ORD-1001 delivered 15 days ago. What is my refund and does a restocking fee apply?",
+      "task_completed": true,
+      "tool_call_correctness": 1.0,
+      "multi_agent_iterations": 1,
+      "single_agent_iterations": 3,
+      "multi_agent_tokens": 1866,
+      "single_agent_tokens": 1352,
+      "coordination_token_overhead_pct": 38.0,
+      "multi_agent_latency_ms": 0.09,
+      "single_agent_latency_ms": 0.06,
+      "failure_type": "none",
+      "failure_details": null,
+      "tools_called": [
+        "order_lookup",
+        "calculate_refund"
+      ],
+      "audit_passed": true,
+      "injected_failure_handled": null
+    },
+    {
+      "test_id": "TC-06",
+      "name": "Failure Injection Test: Carrier Tracking Outage",
+      "query": "Please check live carrier tracking for my order ORD-1001 with tracking TRK-987654321 right now.",
+      "task_completed": true,
+      "tool_call_correctness": 1.0,
+      "multi_agent_iterations": 1,
+      "single_agent_iterations": 3,
+      "multi_agent_tokens": 1889,
+      "single_agent_tokens": 1322,
+      "coordination_token_overhead_pct": 42.9,
+      "multi_agent_latency_ms": 0.09,
+      "single_agent_latency_ms": 0.06,
+      "failure_type": "none",
+      "failure_details": null,
+      "tools_called": [
+        "order_lookup",
+        "track_shipping_package"
+      ],
+      "audit_passed": true,
+      "injected_failure_handled": true
+    }
+  ]
+}

@@ -1,0 +1,643 @@
+[
+  {
+    "chunk_id": "api_test_doc_c000",
+    "doc_id": "api_test_doc",
+    "content": "Special VIP customers receive express 1-day delivery for free.",
+    "chunk_index": 0,
+    "char_start": 0,
+    "char_end": 62,
+    "metadata": {
+      "source": "vip_policy",
+      "chunk_size": 62
+    }
+  },
+  {
+    "chunk_id": "api_test_doc_c000",
+    "doc_id": "api_test_doc",
+    "content": "Special VIP customers receive express 1-day delivery for free.",
+    "chunk_index": 0,
+    "char_start": 0,
+    "char_end": 62,
+    "metadata": {
+      "source": "vip_policy",
+      "chunk_size": 62
+    }
+  },
+  {
+    "chunk_id": "api_test_doc_c000",
+    "doc_id": "api_test_doc",
+    "content": "Special VIP customers receive express 1-day delivery for free.",
+    "chunk_index": 0,
+    "char_start": 0,
+    "char_end": 62,
+    "metadata": {
+      "source": "vip_policy",
+      "chunk_size": 62
+    }
+  },
+  {
+    "chunk_id": "api_test_doc_c000",
+    "doc_id": "api_test_doc",
+    "content": "Special VIP customers receive express 1-day delivery for free.",
+    "chunk_index": 0,
+    "char_start": 0,
+    "char_end": 62,
+    "metadata": {
+      "source": "vip_policy",
+      "chunk_size": 62
+    }
+  },
+  {
+    "chunk_id": "refund_and_return_policy_c000",
+    "doc_id": "refund_and_return_policy",
+    "content": "## # ShopAssist Return & Refund Policy\n\n## ## 1. General Return Window\nCustomers may initiate a return within 30 calendar days from the date of confirmed delivery for a full refund back to the original payment method, provided the item is in unopened, original factory packaging.",
+    "chunk_index": 0,
+    "char_start": 0,
+    "char_end": 279,
+    "metadata": {
+      "source": "refund_and_return_policy.md",
+      "file_type": "md",
+      "char_count": 1314,
+      "chunk_size": 279
+    }
+  },
+  {
+    "chunk_id": "refund_and_return_policy_c001",
+    "doc_id": "refund_and_return_policy",
+    "content": "d back to the original payment method, provided the item is in unopened, original factory packaging.\n\n## ## 2. Opened Items & Restocking Fees\n- Items that have been opened and inspected in like-new condition within 30 days are subject to a **15% restocking fee** to cover sanitation, repackaging, and technician inspection.\n- Return shipping labels for opened returns are the responsibility of the customer unless the product is defective.",
+    "chunk_index": 1,
+    "char_start": 173,
+    "char_end": 612,
+    "metadata": {
+      "source": "refund_and_return_policy.md",
+      "file_type": "md",
+      "char_count": 1314,
+      "chunk_size": 439
+    }
+  },
+  {
+    "chunk_id": "refund_and_return_policy_c002",
+    "doc_id": "refund_and_return_policy",
+    "content": "ng labels for opened returns are the responsibility of the customer unless the product is defective.\n\n## ## 3. Late Returns (31 to 45 Days)\n- Returns requested between 31 and 45 days post-delivery are eligible for **Store Credit only**, minus the 15% restocking fee.\n- Returns beyond 45 days cannot be accepted.",
+    "chunk_index": 2,
+    "char_start": 509,
+    "char_end": 820,
+    "metadata": {
+      "source": "refund_and_return_policy.md",
+      "file_type": "md",
+      "char_count": 1314,
+      "chunk_size": 311
+    }
+  },
+  {
+    "chunk_id": "refund_and_return_policy_c003",
+    "doc_id": "refund_and_return_policy",
+    "content": "or **Store Credit only**, minus the 15% restocking fee.\n- Returns beyond 45 days cannot be accepted.\n\n## ## 4. Defective or Damaged Merchandise\n- Any item arriving damaged, defective, or incorrect qualifies for our **90-Day Satisfaction Warranty**.\n- Customers are entitled to a 100% full refund or immediate free replacement shipment.\n- Prepaid expedited return shipping labels are provided free of charge.",
+    "chunk_index": 3,
+    "char_start": 717,
+    "char_end": 1124,
+    "metadata": {
+      "source": "refund_and_return_policy.md",
+      "file_type": "md",
+      "char_count": 1314,
+      "chunk_size": 407
+    }
+  },
+  {
+    "chunk_id": "refund_and_return_policy_c004",
+    "doc_id": "refund_and_return_policy",
+    "content": "e free replacement shipment.\n- Prepaid expedited return shipping labels are provided free of charge.\n\n## ## 5. Non-Refundable Items\nThe following items are strictly non-refundable:\n- Digital gift cards and software activation keys.\n- Personalized, custom-engraved, or clearance blowout products.",
+    "chunk_index": 4,
+    "char_start": 1021,
+    "char_end": 1316,
+    "metadata": {
+      "source": "refund_and_return_policy.md",
+      "file_type": "md",
+      "char_count": 1314,
+      "chunk_size": 295
+    }
+  },
+  {
+    "chunk_id": "shipping_and_delivery_c000",
+    "doc_id": "shipping_and_delivery",
+    "content": "## # ShopAssist Shipping & Fulfillment Guidelines\n\n## ## 1. Domestic Delivery Tiers\n- **Standard Ground (3-5 Business Days)**: Free for all orders above $50.00. Otherwise, flat rate $4.99.\n- **Expedited 2-Day Shipping**: Available at checkout for $12.99. Orders placed before 2:00 PM EST ship same-day.\n- **Overnight Express**: Guaranteed next-business-day delivery by 10:30 AM in continental US for $24.99.",
+    "chunk_index": 0,
+    "char_start": 0,
+    "char_end": 407,
+    "metadata": {
+      "source": "shipping_and_delivery.md",
+      "file_type": "md",
+      "char_count": 956,
+      "chunk_size": 407
+    }
+  },
+  {
+    "chunk_id": "shipping_and_delivery_c001",
+    "doc_id": "shipping_and_delivery",
+    "content": "Overnight Express**: Guaranteed next-business-day delivery by 10:30 AM in continental US for $24.99.\n\n## ## 2. Real-Time Tracking & Carriers\n- Carrier partners include FedEx, UPS, and DHL Express.\n- Tracking numbers begin with `TRK-` prefix and are activated within 4 hours of warehouse dispatch.\n- Signature confirmation is required for orders exceeding $300 in valuation.",
+    "chunk_index": 1,
+    "char_start": 301,
+    "char_end": 674,
+    "metadata": {
+      "source": "shipping_and_delivery.md",
+      "file_type": "md",
+      "char_count": 956,
+      "chunk_size": 373
+    }
+  },
+  {
+    "chunk_id": "shipping_and_delivery_c002",
+    "doc_id": "shipping_and_delivery",
+    "content": "of warehouse dispatch.\n- Signature confirmation is required for orders exceeding $300 in valuation.\n\n## ## 3. Lost or Stolen Packages\n- If tracking shows delivered but the package cannot be located, allow a 24-hour buffer for carrier false-scans.\n- If still missing after 24 hours, support will launch a carrier trace investigation and issue an immediate replacement upon report filing.",
+    "chunk_index": 2,
+    "char_start": 572,
+    "char_end": 958,
+    "metadata": {
+      "source": "shipping_and_delivery.md",
+      "file_type": "md",
+      "char_count": 956,
+      "chunk_size": 386
+    }
+  },
+  {
+    "chunk_id": "account_and_warranty_c000",
+    "doc_id": "account_and_warranty",
+    "content": "## # ShopAssist Account Security & Warranty Support\n\n## ## 1. Password Resets & MFA\n- Two-Factor Authentication (2FA) is strongly recommended for all accounts.\n- Password reset links expire after 15 minutes.\n- If an account is locked due to repeated incorrect password attempts, lockouts clear automatically after 30 minutes.",
+    "chunk_index": 0,
+    "char_start": 0,
+    "char_end": 325,
+    "metadata": {
+      "source": "account_and_warranty.md",
+      "file_type": "md",
+      "char_count": 899,
+      "chunk_size": 325
+    }
+  },
+  {
+    "chunk_id": "account_and_warranty_c001",
+    "doc_id": "account_and_warranty",
+    "content": "s locked due to repeated incorrect password attempts, lockouts clear automatically after 30 minutes.\n\n## ## 2. Subscription Management\n- Monthly memberships can be cancelled at any time before the billing renewal date via the customer portal.\n- Annual memberships cancelled mid-term are prorated based on remaining full unused months.",
+    "chunk_index": 1,
+    "char_start": 219,
+    "char_end": 553,
+    "metadata": {
+      "source": "account_and_warranty.md",
+      "file_type": "md",
+      "char_count": 899,
+      "chunk_size": 334
+    }
+  },
+  {
+    "chunk_id": "account_and_warranty_c002",
+    "doc_id": "account_and_warranty",
+    "content": "portal.\n- Annual memberships cancelled mid-term are prorated based on remaining full unused months.\n\n## ## 3. Product Warranty Claims\n- Standard 1-Year Manufacturer Warranty is included on all consumer electronics.\n- Covers hardware defects, battery degradation below 70% within 12 months, and internal component failures under normal operating conditions.\n- Accidental drops, liquid submersion, or unauthorized third-party repairs void the warranty.",
+    "chunk_index": 2,
+    "char_start": 451,
+    "char_end": 901,
+    "metadata": {
+      "source": "account_and_warranty.md",
+      "file_type": "md",
+      "char_count": 899,
+      "chunk_size": 450
+    }
+  },
+  {
+    "chunk_id": "api_test_doc_c000",
+    "doc_id": "api_test_doc",
+    "content": "Special VIP customers receive express 1-day delivery for free.",
+    "chunk_index": 0,
+    "char_start": 0,
+    "char_end": 62,
+    "metadata": {
+      "source": "vip_policy",
+      "chunk_size": 62
+    }
+  },
+  {
+    "chunk_id": "api_test_doc_c000",
+    "doc_id": "api_test_doc",
+    "content": "Special VIP customers receive express 1-day delivery for free.",
+    "chunk_index": 0,
+    "char_start": 0,
+    "char_end": 62,
+    "metadata": {
+      "source": "vip_policy",
+      "chunk_size": 62
+    }
+  },
+  {
+    "chunk_id": "api_test_doc_c000",
+    "doc_id": "api_test_doc",
+    "content": "Special VIP customers receive express 1-day delivery for free.",
+    "chunk_index": 0,
+    "char_start": 0,
+    "char_end": 62,
+    "metadata": {
+      "source": "vip_policy",
+      "chunk_size": 62
+    }
+  },
+  {
+    "chunk_id": "api_test_doc_c000",
+    "doc_id": "api_test_doc",
+    "content": "Special VIP customers receive express 1-day delivery for free.",
+    "chunk_index": 0,
+    "char_start": 0,
+    "char_end": 62,
+    "metadata": {
+      "source": "vip_policy",
+      "chunk_size": 62
+    }
+  },
+  {
+    "chunk_id": "api_test_doc_c000",
+    "doc_id": "api_test_doc",
+    "content": "Special VIP customers receive express 1-day delivery for free.",
+    "chunk_index": 0,
+    "char_start": 0,
+    "char_end": 62,
+    "metadata": {
+      "source": "vip_policy",
+      "chunk_size": 62
+    }
+  },
+  {
+    "chunk_id": "tmpflzufvo1_c000",
+    "doc_id": "tmpflzufvo1",
+    "content": "--- Page 1 ---\nTRIBHUVAN UNIVERSITY Exam    Regular \nINSTITUTE OF ENGINEEING Level BE/BAR Full Marks 60 \nExamination Control \nDivision \nProgram   BCT Pass Marks 24 \nModel Question Year / Part III / II Time 3 Hrs \n   \nSubject:-    Artificial Intelligence (ENCT 351) \n \nQN Questions  Marks  Unit  \n1.  What is Reverse turing test? What are the Importance of DIKW in \nArtificial Intelligence? \n \n1+4=5 1 \n2.  What is Cryptoarithmetics? Explain with steps why Genetic",
+    "chunk_index": 0,
+    "char_start": 0,
+    "char_end": 463,
+    "metadata": {
+      "source": "tmpflzufvo1.pdf",
+      "file_type": "pdf",
+      "char_count": 1574,
+      "original_filename": "Artificial_Intelligence.pdf",
+      "chunk_size": 463
+    }
+  },
+  {
+    "chunk_id": "tmpflzufvo1_c001",
+    "doc_id": "tmpflzufvo1",
+    "content": "Artificial Intelligence? \n \n1+4=5 1 \n2.  What is Cryptoarithmetics? Explain with steps why Genetic\n\nArtificial Intelligence? \n \n1+4=5 1 \n2.  What is Cryptoarithmetics? Explain with steps why Genetic \nAlgorithm is used for optimization? \n \n2+4=6 2 \n3.  What is adversarial search? For the given graph, compute Alpha-\nbeta search technique. \n \n \n2+4=6 2 \n4.  What are the knowledge representation techniques? What are the \ncomponents of Fuzzy Inference System? \n \n2+4=6 3 \n5.  What is semi supervised learning? Explain the working principle \nfor Support Vector Machine. \n \n2+4=6 4",
+    "chunk_index": 1,
+    "char_start": 365,
+    "char_end": 943,
+    "metadata": {
+      "source": "tmpflzufvo1.pdf",
+      "file_type": "pdf",
+      "char_count": 1574,
+      "original_filename": "Artificial_Intelligence.pdf",
+      "chunk_size": 578
+    }
+  },
+  {
+    "chunk_id": "tmpflzufvo1_c002",
+    "doc_id": "tmpflzufvo1",
+    "content": "t is semi supervised learning? Explain the working principle \nfor Support Vector Machine. \n \n2+4=6 4\n\nis semi supervised learning? Explain the working principle \nfor Support Vector Machine. \n \n2+4=6 4 \n6.  Why linear algebra is used for machine learning? Confusion \nMatrix for Disease Detection  \n \na) What is the total \nnumber of actual positive classes? \nb) Calculate \nPrecision, recall and F1 score. \nc) Is model better at \ndetection disease or not? \n \nActual \nDisease \nPredicted \nDisease \n \n True  False  \nTrue  25 5 \nFalse  15 55 \n2+4=6 4",
+    "chunk_index": 2,
+    "char_start": 743,
+    "char_end": 1286,
+    "metadata": {
+      "source": "tmpflzufvo1.pdf",
+      "file_type": "pdf",
+      "char_count": 1574,
+      "original_filename": "Artificial_Intelligence.pdf",
+      "chunk_size": 543
+    }
+  },
+  {
+    "chunk_id": "tmpflzufvo1_c003",
+    "doc_id": "tmpflzufvo1",
+    "content": "e or not? \n \nActual \nDisease \nPredicted \nDisease \n \n True  False  \nTrue  25 5 \nFalse  15 55 \n2+4=6 4\n\nor not? \n \nActual \nDisease \nPredicted \nDisease \n \n True  False  \nTrue  25 5 \nFalse  15 55 \n2+4=6 4 \n7.  Difference betwen ML and DL. What is Backpropagation \nalgorithm, perform its derivation? \n \n2+4=6 5",
+    "chunk_index": 3,
+    "char_start": 1086,
+    "char_end": 1391,
+    "metadata": {
+      "source": "tmpflzufvo1.pdf",
+      "file_type": "pdf",
+      "char_count": 1574,
+      "original_filename": "Artificial_Intelligence.pdf",
+      "chunk_size": 305
+    }
+  },
+  {
+    "chunk_id": "tmpflzufvo1_c004",
+    "doc_id": "tmpflzufvo1",
+    "content": "Difference betwen ML and DL. What is Backpropagation \nalgorithm, perform its derivation? \n \n2+4=6 5\n\n\n--- Page 2 ---\n8.  Define GAN. What is the working principle for Convolution \nNeural Networks? \n \n2+4=6 5 \n9.  What is Green AI? Explain the steps for Computer vision and \ncomponents. \n \n2+4=6 6 \n10.  Write short notes on: \na) Federated Learning \nb) Backward Chaining \n3*2=6 7",
+    "chunk_index": 4,
+    "char_start": 1192,
+    "char_end": 1570,
+    "metadata": {
+      "source": "tmpflzufvo1.pdf",
+      "file_type": "pdf",
+      "char_count": 1574,
+      "original_filename": "Artificial_Intelligence.pdf",
+      "chunk_size": 378
+    }
+  },
+  {
+    "chunk_id": "tmpek2l4mae_c000",
+    "doc_id": "tmpek2l4mae",
+    "content": "--- Page 1 ---\nTRIBHUVAN UNIVERSITY Exam    Regular \nINSTITUTE OF ENGINEEING Level BE/BAR Full Marks 60 \nExamination Control \nDivision \nProgram   BCT Pass Marks 24 \nModel Question Year / Part III / II Time 3 Hrs \n   \nSubject:-    Artificial Intelligence (ENCT 351) \n \nQN Questions  Marks  Unit  \n1.  What is Reverse turing test? What are the Importance of DIKW in \nArtificial Intelligence? \n \n1+4=5 1 \n2.  What is Cryptoarithmetics? Explain with steps why Genetic",
+    "chunk_index": 0,
+    "char_start": 0,
+    "char_end": 463,
+    "metadata": {
+      "source": "tmpek2l4mae.pdf",
+      "file_type": "pdf",
+      "char_count": 1574,
+      "original_filename": "Artificial_Intelligence.pdf",
+      "chunk_size": 463
+    }
+  },
+  {
+    "chunk_id": "tmpek2l4mae_c001",
+    "doc_id": "tmpek2l4mae",
+    "content": "Artificial Intelligence? \n \n1+4=5 1 \n2.  What is Cryptoarithmetics? Explain with steps why Genetic\n\nArtificial Intelligence? \n \n1+4=5 1 \n2.  What is Cryptoarithmetics? Explain with steps why Genetic \nAlgorithm is used for optimization? \n \n2+4=6 2 \n3.  What is adversarial search? For the given graph, compute Alpha-\nbeta search technique. \n \n \n2+4=6 2 \n4.  What are the knowledge representation techniques? What are the \ncomponents of Fuzzy Inference System? \n \n2+4=6 3 \n5.  What is semi supervised learning? Explain the working principle \nfor Support Vector Machine. \n \n2+4=6 4",
+    "chunk_index": 1,
+    "char_start": 365,
+    "char_end": 943,
+    "metadata": {
+      "source": "tmpek2l4mae.pdf",
+      "file_type": "pdf",
+      "char_count": 1574,
+      "original_filename": "Artificial_Intelligence.pdf",
+      "chunk_size": 578
+    }
+  },
+  {
+    "chunk_id": "tmpek2l4mae_c002",
+    "doc_id": "tmpek2l4mae",
+    "content": "t is semi supervised learning? Explain the working principle \nfor Support Vector Machine. \n \n2+4=6 4\n\nis semi supervised learning? Explain the working principle \nfor Support Vector Machine. \n \n2+4=6 4 \n6.  Why linear algebra is used for machine learning? Confusion \nMatrix for Disease Detection  \n \na) What is the total \nnumber of actual positive classes? \nb) Calculate \nPrecision, recall and F1 score. \nc) Is model better at \ndetection disease or not? \n \nActual \nDisease \nPredicted \nDisease \n \n True  False  \nTrue  25 5 \nFalse  15 55 \n2+4=6 4",
+    "chunk_index": 2,
+    "char_start": 743,
+    "char_end": 1286,
+    "metadata": {
+      "source": "tmpek2l4mae.pdf",
+      "file_type": "pdf",
+      "char_count": 1574,
+      "original_filename": "Artificial_Intelligence.pdf",
+      "chunk_size": 543
+    }
+  },
+  {
+    "chunk_id": "tmpek2l4mae_c003",
+    "doc_id": "tmpek2l4mae",
+    "content": "e or not? \n \nActual \nDisease \nPredicted \nDisease \n \n True  False  \nTrue  25 5 \nFalse  15 55 \n2+4=6 4\n\nor not? \n \nActual \nDisease \nPredicted \nDisease \n \n True  False  \nTrue  25 5 \nFalse  15 55 \n2+4=6 4 \n7.  Difference betwen ML and DL. What is Backpropagation \nalgorithm, perform its derivation? \n \n2+4=6 5",
+    "chunk_index": 3,
+    "char_start": 1086,
+    "char_end": 1391,
+    "metadata": {
+      "source": "tmpek2l4mae.pdf",
+      "file_type": "pdf",
+      "char_count": 1574,
+      "original_filename": "Artificial_Intelligence.pdf",
+      "chunk_size": 305
+    }
+  },
+  {
+    "chunk_id": "tmpek2l4mae_c004",
+    "doc_id": "tmpek2l4mae",
+    "content": "Difference betwen ML and DL. What is Backpropagation \nalgorithm, perform its derivation? \n \n2+4=6 5\n\n\n--- Page 2 ---\n8.  Define GAN. What is the working principle for Convolution \nNeural Networks? \n \n2+4=6 5 \n9.  What is Green AI? Explain the steps for Computer vision and \ncomponents. \n \n2+4=6 6 \n10.  Write short notes on: \na) Federated Learning \nb) Backward Chaining \n3*2=6 7",
+    "chunk_index": 4,
+    "char_start": 1192,
+    "char_end": 1570,
+    "metadata": {
+      "source": "tmpek2l4mae.pdf",
+      "file_type": "pdf",
+      "char_count": 1574,
+      "original_filename": "Artificial_Intelligence.pdf",
+      "chunk_size": 378
+    }
+  },
+  {
+    "chunk_id": "tmphu8jilqf_c000",
+    "doc_id": "tmphu8jilqf",
+    "content": "--- Page 1 ---\nTRIBHUVAN UNIVERSITY Exam    Regular \nINSTITUTE OF ENGINEEING Level BE/BAR Full Marks 60 \nExamination Control \nDivision \nProgram   BCT Pass Marks 24 \nModel Question Year / Part III / II Time 3 Hrs \n   \nSubject:-    Artificial Intelligence (ENCT 351) \n \nQN Questions  Marks  Unit  \n1.  What is Reverse turing test? What are the Importance of DIKW in \nArtificial Intelligence? \n \n1+4=5 1 \n2.  What is Cryptoarithmetics? Explain with steps why Genetic",
+    "chunk_index": 0,
+    "char_start": 0,
+    "char_end": 463,
+    "metadata": {
+      "source": "tmphu8jilqf.pdf",
+      "file_type": "pdf",
+      "char_count": 1574,
+      "original_filename": "Artificial_Intelligence.pdf",
+      "chunk_size": 463
+    }
+  },
+  {
+    "chunk_id": "tmphu8jilqf_c001",
+    "doc_id": "tmphu8jilqf",
+    "content": "Artificial Intelligence? \n \n1+4=5 1 \n2.  What is Cryptoarithmetics? Explain with steps why Genetic\n\nArtificial Intelligence? \n \n1+4=5 1 \n2.  What is Cryptoarithmetics? Explain with steps why Genetic \nAlgorithm is used for optimization? \n \n2+4=6 2 \n3.  What is adversarial search? For the given graph, compute Alpha-\nbeta search technique. \n \n \n2+4=6 2 \n4.  What are the knowledge representation techniques? What are the \ncomponents of Fuzzy Inference System? \n \n2+4=6 3 \n5.  What is semi supervised learning? Explain the working principle \nfor Support Vector Machine. \n \n2+4=6 4",
+    "chunk_index": 1,
+    "char_start": 365,
+    "char_end": 943,
+    "metadata": {
+      "source": "tmphu8jilqf.pdf",
+      "file_type": "pdf",
+      "char_count": 1574,
+      "original_filename": "Artificial_Intelligence.pdf",
+      "chunk_size": 578
+    }
+  },
+  {
+    "chunk_id": "tmphu8jilqf_c002",
+    "doc_id": "tmphu8jilqf",
+    "content": "t is semi supervised learning? Explain the working principle \nfor Support Vector Machine. \n \n2+4=6 4\n\nis semi supervised learning? Explain the working principle \nfor Support Vector Machine. \n \n2+4=6 4 \n6.  Why linear algebra is used for machine learning? Confusion \nMatrix for Disease Detection  \n \na) What is the total \nnumber of actual positive classes? \nb) Calculate \nPrecision, recall and F1 score. \nc) Is model better at \ndetection disease or not? \n \nActual \nDisease \nPredicted \nDisease \n \n True  False  \nTrue  25 5 \nFalse  15 55 \n2+4=6 4",
+    "chunk_index": 2,
+    "char_start": 743,
+    "char_end": 1286,
+    "metadata": {
+      "source": "tmphu8jilqf.pdf",
+      "file_type": "pdf",
+      "char_count": 1574,
+      "original_filename": "Artificial_Intelligence.pdf",
+      "chunk_size": 543
+    }
+  },
+  {
+    "chunk_id": "tmphu8jilqf_c003",
+    "doc_id": "tmphu8jilqf",
+    "content": "e or not? \n \nActual \nDisease \nPredicted \nDisease \n \n True  False  \nTrue  25 5 \nFalse  15 55 \n2+4=6 4\n\nor not? \n \nActual \nDisease \nPredicted \nDisease \n \n True  False  \nTrue  25 5 \nFalse  15 55 \n2+4=6 4 \n7.  Difference betwen ML and DL. What is Backpropagation \nalgorithm, perform its derivation? \n \n2+4=6 5",
+    "chunk_index": 3,
+    "char_start": 1086,
+    "char_end": 1391,
+    "metadata": {
+      "source": "tmphu8jilqf.pdf",
+      "file_type": "pdf",
+      "char_count": 1574,
+      "original_filename": "Artificial_Intelligence.pdf",
+      "chunk_size": 305
+    }
+  },
+  {
+    "chunk_id": "tmphu8jilqf_c004",
+    "doc_id": "tmphu8jilqf",
+    "content": "Difference betwen ML and DL. What is Backpropagation \nalgorithm, perform its derivation? \n \n2+4=6 5\n\n\n--- Page 2 ---\n8.  Define GAN. What is the working principle for Convolution \nNeural Networks? \n \n2+4=6 5 \n9.  What is Green AI? Explain the steps for Computer vision and \ncomponents. \n \n2+4=6 6 \n10.  Write short notes on: \na) Federated Learning \nb) Backward Chaining \n3*2=6 7",
+    "chunk_index": 4,
+    "char_start": 1192,
+    "char_end": 1570,
+    "metadata": {
+      "source": "tmphu8jilqf.pdf",
+      "file_type": "pdf",
+      "char_count": 1574,
+      "original_filename": "Artificial_Intelligence.pdf",
+      "chunk_size": 378
+    }
+  },
+  {
+    "chunk_id": "tmpqdg93r73_c000",
+    "doc_id": "tmpqdg93r73",
+    "content": "--- Page 1 ---\nTRIBHUVAN UNIVERSITY Exam    Regular \nINSTITUTE OF ENGINEEING Level BE/BAR Full Marks 60 \nExamination Control \nDivision \nProgram   BCT Pass Marks 24 \nModel Question Year / Part III / II Time 3 Hrs \n   \nSubject:-    Artificial Intelligence (ENCT 351) \n \nQN Questions  Marks  Unit  \n1.  What is Reverse turing test? What are the Importance of DIKW in \nArtificial Intelligence? \n \n1+4=5 1 \n2.  What is Cryptoarithmetics? Explain with steps why Genetic",
+    "chunk_index": 0,
+    "char_start": 0,
+    "char_end": 463,
+    "metadata": {
+      "source": "Artificial_Intelligence.pdf",
+      "file_type": "pdf",
+      "char_count": 1574,
+      "chunk_size": 463
+    }
+  },
+  {
+    "chunk_id": "tmpqdg93r73_c001",
+    "doc_id": "tmpqdg93r73",
+    "content": "Artificial Intelligence? \n \n1+4=5 1 \n2.  What is Cryptoarithmetics? Explain with steps why Genetic\n\nArtificial Intelligence? \n \n1+4=5 1 \n2.  What is Cryptoarithmetics? Explain with steps why Genetic \nAlgorithm is used for optimization? \n \n2+4=6 2 \n3.  What is adversarial search? For the given graph, compute Alpha-\nbeta search technique. \n \n \n2+4=6 2 \n4.  What are the knowledge representation techniques? What are the \ncomponents of Fuzzy Inference System? \n \n2+4=6 3 \n5.  What is semi supervised learning? Explain the working principle \nfor Support Vector Machine. \n \n2+4=6 4",
+    "chunk_index": 1,
+    "char_start": 365,
+    "char_end": 943,
+    "metadata": {
+      "source": "Artificial_Intelligence.pdf",
+      "file_type": "pdf",
+      "char_count": 1574,
+      "chunk_size": 578
+    }
+  },
+  {
+    "chunk_id": "tmpqdg93r73_c002",
+    "doc_id": "tmpqdg93r73",
+    "content": "t is semi supervised learning? Explain the working principle \nfor Support Vector Machine. \n \n2+4=6 4\n\nis semi supervised learning? Explain the working principle \nfor Support Vector Machine. \n \n2+4=6 4 \n6.  Why linear algebra is used for machine learning? Confusion \nMatrix for Disease Detection  \n \na) What is the total \nnumber of actual positive classes? \nb) Calculate \nPrecision, recall and F1 score. \nc) Is model better at \ndetection disease or not? \n \nActual \nDisease \nPredicted \nDisease \n \n True  False  \nTrue  25 5 \nFalse  15 55 \n2+4=6 4",
+    "chunk_index": 2,
+    "char_start": 743,
+    "char_end": 1286,
+    "metadata": {
+      "source": "Artificial_Intelligence.pdf",
+      "file_type": "pdf",
+      "char_count": 1574,
+      "chunk_size": 543
+    }
+  },
+  {
+    "chunk_id": "tmpqdg93r73_c003",
+    "doc_id": "tmpqdg93r73",
+    "content": "e or not? \n \nActual \nDisease \nPredicted \nDisease \n \n True  False  \nTrue  25 5 \nFalse  15 55 \n2+4=6 4\n\nor not? \n \nActual \nDisease \nPredicted \nDisease \n \n True  False  \nTrue  25 5 \nFalse  15 55 \n2+4=6 4 \n7.  Difference betwen ML and DL. What is Backpropagation \nalgorithm, perform its derivation? \n \n2+4=6 5",
+    "chunk_index": 3,
+    "char_start": 1086,
+    "char_end": 1391,
+    "metadata": {
+      "source": "Artificial_Intelligence.pdf",
+      "file_type": "pdf",
+      "char_count": 1574,
+      "chunk_size": 305
+    }
+  },
+  {
+    "chunk_id": "tmpqdg93r73_c004",
+    "doc_id": "tmpqdg93r73",
+    "content": "Difference betwen ML and DL. What is Backpropagation \nalgorithm, perform its derivation? \n \n2+4=6 5\n\n\n--- Page 2 ---\n8.  Define GAN. What is the working principle for Convolution \nNeural Networks? \n \n2+4=6 5 \n9.  What is Green AI? Explain the steps for Computer vision and \ncomponents. \n \n2+4=6 6 \n10.  Write short notes on: \na) Federated Learning \nb) Backward Chaining \n3*2=6 7",
+    "chunk_index": 4,
+    "char_start": 1192,
+    "char_end": 1570,
+    "metadata": {
+      "source": "Artificial_Intelligence.pdf",
+      "file_type": "pdf",
+      "char_count": 1574,
+      "chunk_size": 378
+    }
+  },
+  {
+    "chunk_id": "api_test_doc_c000",
+    "doc_id": "api_test_doc",
+    "content": "Special VIP customers receive express 1-day delivery for free.",
+    "chunk_index": 0,
+    "char_start": 0,
+    "char_end": 62,
+    "metadata": {
+      "source": "vip_policy",
+      "chunk_size": 62
+    }
+  },
+  {
+    "chunk_id": "api_test_doc_c000",
+    "doc_id": "api_test_doc",
+    "content": "Special VIP customers receive express 1-day delivery for free.",
+    "chunk_index": 0,
+    "char_start": 0,
+    "char_end": 62,
+    "metadata": {
+      "source": "vip_policy",
+      "chunk_size": 62
+    }
+  },
+  {
+    "chunk_id": "api_test_doc_c000",
+    "doc_id": "api_test_doc",
+    "content": "Special VIP customers receive express 1-day delivery for free.",
+    "chunk_index": 0,
+    "char_start": 0,
+    "char_end": 62,
+    "metadata": {
+      "source": "vip_policy",
+      "chunk_size": 62
+    }
+  },
+  {
+    "chunk_id": "api_test_doc_c000",
+    "doc_id": "api_test_doc",
+    "content": "Special VIP customers receive express 1-day delivery for free.",
+    "chunk_index": 0,
+    "char_start": 0,
+    "char_end": 62,
+    "metadata": {
+      "source": "vip_policy",
+      "chunk_size": 62
+    }
+  },
+  {
+    "chunk_id": "api_test_doc_c000",
+    "doc_id": "api_test_doc",
+    "content": "Special VIP customers receive express 1-day delivery for free.",
+    "chunk_index": 0,
+    "char_start": 0,
+    "char_end": 62,
+    "metadata": {
+      "source": "vip_policy",
+      "chunk_size": 62
+    }
+  },
+  {
+    "chunk_id": "api_test_doc_c000",
+    "doc_id": "api_test_doc",
+    "content": "Special VIP customers receive express 1-day delivery for free.",
+    "chunk_index": 0,
+    "char_start": 0,
+    "char_end": 62,
+    "metadata": {
+      "source": "vip_policy",
+      "chunk_size": 62
+    }
+  },
+  {
+    "chunk_id": "api_test_doc_c000",
+    "doc_id": "api_test_doc",
+    "content": "Special VIP customers receive express 1-day delivery for free.",
+    "chunk_index": 0,
+    "char_start": 0,
+    "char_end": 62,
+    "metadata": {
+      "source": "vip_policy",
+      "chunk_size": 62
+    }
+  }
+]
